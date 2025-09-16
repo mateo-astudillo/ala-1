@@ -13,7 +13,7 @@ export const diffucultyIndex = {
 export const hint = "Use las flechas y enter para elegir"
 
 export const validate = value => {
-  return /^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(value)
+  return /^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ]+( [a-zA-Z0-9áéíóúÁÉÍÓÚñÑüÜ]+)*$/.test(value)
     ? true
     : "Solo se permiten letras y números"
 }
