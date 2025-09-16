@@ -8,6 +8,17 @@ import { otherTasks } from "./example-tasks.js"
 
 export const imt = []; // in memory tasks
 
+// TODO
+// descripción puede ser vacía
+// estado "cancelada"
+// vencimiento puede ser vacío
+// título hasta 100
+// descripción hasta 500
+// ordenar tareas al mostrarlas
+// bonus: elegir el orden
+// confirmar edición
+// emojis para dificultad
+
 (async () => {
   otherTasks.forEach(t => imt.push(t));
   while (true) {
