@@ -1,0 +1,15 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Mateo",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "clear && node app.js"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}
