@@ -19,7 +19,7 @@ export const validate = value => {
 }
 
 export const validateTitle = (value, taskTitles) => {
-  if (taskTitles.some(t => t === value))
+  if (taskTitles.some(t => t.title === value))
     return "Ya hay una tarea con ese nombre"
   return validate(value);
 }

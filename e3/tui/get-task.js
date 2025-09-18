@@ -3,7 +3,7 @@ import { statusIndex, diffucultyIndex, validate, validateTitle, onCancel, hint }
 
 export async function getTask(taskTitles, task = {
   title: "Mi tarea",
-  description: "Detalles",
+  description: "sin descripción",
   status: 0,
   difficulty: 0,
   dueDate: new Date()
@@ -58,6 +58,11 @@ export async function getTask(taskTitles, task = {
       initial: task.dueDate
     },
   ],
-    { onCancel }
+    {
+      onCancel, onSubmit: async (_prompts, _answer, answers) => {
+        if (answers.description === "sin descripción")
+          answers.description = "...";
+      }
+    }
   );
 }

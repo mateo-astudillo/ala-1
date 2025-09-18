@@ -1,6 +1,5 @@
 import prompts from "prompts";
-
-const onCancel = (_prompt, answer) => answer.cancelled = true;
+import { onCancel } from "./utils"; 
 
 export function seeTasksMenu(disabled = { "toDo": false, "inProgress": false, "done": false }) {
   return prompts(
